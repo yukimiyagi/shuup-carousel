@@ -22,3 +22,16 @@ $(".owl-carousel.four").each(function() {
         }
     });
 });
+
+// Add the swipes gesture to the carousel on mobile devices.
+$(".carousel").swipe({
+
+  swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
+
+    if (direction == 'left') $(this).carousel('next');
+    if (direction == 'right') $(this).carousel('prev');
+
+  },
+  allowPageScroll:"vertical"
+
+});

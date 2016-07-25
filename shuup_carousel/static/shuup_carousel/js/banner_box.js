@@ -11,7 +11,7 @@ $(".owl-carousel.four").each(function() {
         responsiveClass: true,
         responsive: {
             0: { // breakpoint from 0 up
-                items : 1,
+                items : 2,
             },
             640: { // breakpoint from 640 up
                 items : 2,
@@ -21,17 +21,4 @@ $(".owl-carousel.four").each(function() {
             }
         }
     });
-});
-
-// Add the swipes gesture to the carousel on mobile devices.
-$(".carousel").swipe({
-
-  swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
-
-    if (direction == 'left') $(this).carousel('next');
-    if (direction == 'right') $(this).carousel('prev');
-
-  },
-  allowPageScroll:"vertical"
-
 });
